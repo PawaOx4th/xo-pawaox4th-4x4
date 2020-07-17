@@ -37,6 +37,10 @@
     </div>
 
     <!-- Save Score Section -->
+    <div class="menu-button">
+      <ButtonToHome />
+      <ButtonToHistory />
+    </div>
   </div>
 </template>
 
@@ -45,7 +49,9 @@ export default {
   name: "game",
   components: {
     Board: () => import("../components/Board"),
-    SaveScore: () => import("../components/SaveScore")
+    SaveScore: () => import("../components/SaveScore"),
+    ButtonToHome: () => import("../components/BunttonHome"),
+    ButtonToHistory: () => import("../components/BunttonHistory")
   },
   data() {
     return {
@@ -165,6 +171,7 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .game {
@@ -179,6 +186,16 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.menu-button {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 60%;
+  padding: 2rem 0;
 }
 
 .game-area {
