@@ -142,6 +142,7 @@ export default {
         min-width: 30%;
         padding: 0 2rem;
         color: #2f89fc;
+        flex-wrap: wrap;
         // border-left: 10px solid #ffa45c;
         font-size: 2rem;
         font-weight: bold;
