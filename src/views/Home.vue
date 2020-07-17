@@ -70,22 +70,22 @@ export default {
 
   .page-game {
     // border: 5px solid #c389fa;
-    color: #ff8a5c;
+    color: #2cb978;
   }
 
   .page-game:hover {
-    background: #ff8a5c;
+    background: #2cb978;
     border: none;
     width: 10.5em;
     color: #fff;
   }
 
   .page-history {
-    color: #fc5185;
+    color: #be6a15;
   }
 
   .page-history:hover {
-    background: #fc5185;
+    background: #be6a15;
     border: none;
     width: 10.5em;
     color: #fff;
