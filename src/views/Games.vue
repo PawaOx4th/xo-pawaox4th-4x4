@@ -77,7 +77,6 @@ export default {
   methods: {
     handleSaveUser() {
       this.restart();
-      console.log("222");
     },
 
     handleStore() {
@@ -148,7 +147,6 @@ export default {
       //  เรียก function ทำการ random เลขเพื่อทำการ ปิดช่อง
       let randomNumberinRange = this.renDomMunber(min, max);
       this.squares[randomNumberinRange] = "blank";
-      // console.log("setBlank -> this.squares", this.squares)
     },
 
     renDomMunber(min, max) {
