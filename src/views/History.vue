@@ -8,10 +8,14 @@ script<template>
       <div class="score">
         <div v-if="historys == 0" class="no-history">No History</div>
         <div v-else class="history-section">
-          <div class="card-score" v-for="(history, index) in historys.slice(0, 10)" :key="index">
+          <div
+            class="card-score"
+            v-for="(history, index) in historys.slice(0, 10)"
+            :key="index"
+          >
             <div class="name">
               <div class="history-no">
-                <p>{{ index + 1}}</p>
+                <p>{{ index + 1 }}</p>
               </div>
               <p class="user-name">
                 <!-- <strong>Name: &emsp;</strong> -->
@@ -78,7 +82,6 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  // background: gray;
   min-height: 100%;
 
   .menu-button {
@@ -86,7 +89,6 @@ export default {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    // border: (var(--b));
     width: 60%;
     padding: 2rem 0;
   }
@@ -152,8 +154,9 @@ export default {
           display: flex;
           align-items: center;
           flex-wrap: wrap;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
+          min-width: 50%;
 
           .user-name {
           }
@@ -175,8 +178,6 @@ export default {
 @media screen and (max-width: 380px) {
   .content {
     .score {
-     
-
       .history-section {
         min-width: 80%;
 
@@ -185,10 +186,20 @@ export default {
           .name {
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             flex-direction: column;
+            text-align: center;
+            margin: 1rem 0 0 0;
+            overflow: hidden;
+            text-align: center;
+            // font-size: 1.5rem;
+            width: 100%;
+
+            .user-name {
+              //
+            }
           }
         }
       }
