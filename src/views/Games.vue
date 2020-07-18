@@ -81,7 +81,6 @@ export default {
 
     handleStore() {
       this.$store.dispatch("saveHisory", this.userWinner);
-
       this.restart();
     },
 

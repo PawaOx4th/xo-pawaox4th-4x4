@@ -10,7 +10,7 @@
           <br />
           <label id="labelScore" for="score">Score</label>
           <br />
-          <input type="number" id="score" name="score" v-model="statistics.score" />
+          <input type="number" id="score" name="score" @input="checknum" />
           <br />
           <br />
           <button class="card-save-btn" @click.prevent="handleSaveUser">Save</button>
@@ -27,11 +27,15 @@ export default {
     return {
       statistics: {
         name: "",
-        score: ""
+        score: null
       }
     };
   },
   methods: {
+    checknum(e) {
+      e.target.value = e.target.value.replace(/[^0-9]+/g, "");
+      this.statistics.score = parseInt(e.target.value);
+    },
     handleSaveUser() {
       this.$store.dispatch("saveHisory", this.statistics);
       this.$emit("handleSaveUser");
