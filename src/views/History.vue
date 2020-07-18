@@ -175,7 +175,7 @@ export default {
 @media screen and (max-width: 380px) {
   .content {
     .score {
-      width: 95%;
+     
 
       .history-section {
         min-width: 80%;
